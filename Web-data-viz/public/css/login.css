@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&family=Roboto+Flex:wght@400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.25s ease;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* container */
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.voltar-inicio {
+    text-decoration: none;
+    color: #e09510;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.voltar-inicio:hover {
+    color: #f5ba5a;
+}
+
+
+/* Parte esquerda */
+
+.boas-vindas {
+    width: 50vw;
+    height: 100vh;
+    background: #000E3A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 4vw;
+}
+
+.bv-conteudo {
+    max-width: 30vw;
+}
+
+.logo {
+    font-family: 'Unica One', sans-serif;
+    font-size: 5vh;
+    margin-bottom: 8vh;
+    color: #f5ba5a;
+
+}
+
+.boas-vindas h1 {
+    font-size: 5vh;
+    line-height: 1.1;
+    margin-bottom: 3vh;
+}
+
+.gold {
+    color: #F5BA5A;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 900;
+}
+
+.white {
+    color: white;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 900;
+}
+
+.descricao {
+    font-size: 1.8vh;
+    max-width: 22vw;
+    color: #ffffff;
+}
+
+/* Parte login */
+
+.login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4;
+}
+
+.login-box {
+    width: 25vw;
+}
+
+.login-box h2 {
+    font-size: 5vh;
+    margin-bottom: 6vh;
+    font-weight: 900;
+}
+
+.blue {
+    color: #000E3A;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 900;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* campos */
+
+label {
+    font-size: 1.6vh;
+    margin-bottom: 0.5vh;
+}
+
+input {
+    height: 5vh;
+    padding-left: 1vw;
+    border-radius: 0.8vh;
+    border: none;
+    background: #e7e7e7;
+    margin-bottom: 2vh;
+    font-size: 1.6vh;
+}
+
+/* hover das inputs */
+
+input:hover {
+    transform: scale(1.03);
+    background: #f1f1f1;
+    border: 0.2vh solid #d0d0d0;
+}
+
+/* LINK */
+
+.esqueceu-senha {
+    font-size: 1.8vh;
+    color: #F5BA5A;
+    text-decoration: none;
+    margin-bottom: 3vh;
+}
+
+.esqueceu-senha:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* botão */
+
+button {
+    height: 5vh;
+    border: none;
+    border-radius: 0.8vh;
+    background: #0b1a40;
+    color: white;
+    font-size: 1.7vh;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* hover do botão */
+
+button:hover {
+    transform: scale(1.05);
+    background: #132a6d;
+    border: 0.2vh solid #1b3ba3;
+}
+
+/* registro */
+
+.registrar {
+    margin-top: 3vh;
+    font-size: 1.8vh;
+    color: #999;
+}
+
+.registrar a {
+    color: #F5BA5A;
+    text-decoration: none;
+}
+
+.registrar a:hover {
+    color: #F5BA5A;
+    text-decoration: underline;
+}
+
+
+/* resetar senha */
+
+#reset-section {
+    display: none;
+}
+
+#reset-section h2 {
+    font-size: 5vh;
+    margin-bottom: 8vh;
+    font-weight: 900;
+}
+
+#reset-section input {
+    height: 5vh;
+    padding-left: 1vw;
+    border-radius: 0.8vh;
+    border: none;
+    background: #e7e7e7;
+    margin-bottom: 2vh;
+    font-size: 1.6vh;
+}
+
+.resend {
+    margin-top: 2vh;
+    font-size: 1.8vh;
+    color: #777;
+}
+
+.resend a {
+    color: #F5BA5A;
+    text-decoration: none;
+}
+
+.resend a:hover {
+    text-decoration: underline;
+}
+
+.voltar-login {
+    margin-top: 2vh;
+    font-size: 1.8vh;
+}
+
+.voltar-login a {
+    cursor: pointer;
+    color: #F5BA5A;
+    text-decoration: none;
+}
+
+.voltar-login a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* responsividade */
+
+@media (max-width: 900px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .boas-vindas {
+        width: 100vw;
+        height: 40vh;
+        text-align: center;
+    }
+
+    .bv-conteudo {
+        max-width: 80vw;
+    }
+
+    .descricao {
+        max-width: 80vw;
+    }
+
+    .login {
+        width: 100vw;
+        height: 60vh;
+    }
+
+    .login-box {
+        width: 80vw;
+    }
+
+}

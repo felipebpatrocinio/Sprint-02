@@ -1,0 +1,257 @@
+ *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Painel da Esquerda */
+    .left-frame {
+      flex: 0 0 52%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 64px;
+      background: #ffffff;
+    }
+
+    .form-wrapper {
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .new-agency {
+      font-family: 'Roboto Flex', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #f5ba5a;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .new-agency a {
+    text-decoration: none;
+    color: #e09510;
+}
+
+    .create-account {
+      font-family: 'Roboto Flex', sans-serif;
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 900;
+      color: #0d1b3e;
+      line-height: 1.1;
+      margin-bottom: 36px;
+    }
+
+    .create-account span {
+      color: #f5ba5a;
+    }
+
+    /* Campos para preenchimento */
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .field label {
+      font-size: 13px;
+      font-weight: 400;
+      color: #6b7280;
+      letter-spacing: 0.01em;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 14px 18px;
+      background: #f5f5f5;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 10px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
+      color: #0d1b3e;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .field input::placeholder {
+      color: #9ca3af;
+    }
+
+    /* Animação de foco */
+    .field input:focus {
+      border-color: #f5ba5a;
+      box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.15);
+      background: #ffffff;
+    }
+
+    .field-error {
+      font-size: 12px;
+      color: #e53e3e;
+      min-height: 16px;
+    }
+
+    /* 2 campos na mesma linha */
+    .two-fields {
+      display: grid;
+      grid-template-columns: 50% 46%;
+      gap: 16px;
+    }
+
+    .create-button {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin-top: 8px;
+      background: #f5ba5a;
+      color: #ffffff;
+      font-family: 'Roboto Flex', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+
+    /* Animações do Botão */
+    .create-button:hover {
+      background: #e09510;
+      box-shadow: 0 6px 20px rgba(245, 166, 35, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .create-button:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    .redirection-login {
+      text-align: center;
+      margin-top: 22px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    .redirection-login a {
+      color: #f5ba5a;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .redirection-login a:hover {
+      color: #e09510;
+      text-decoration: underline;
+    }
+
+    /* Painel da Direita */
+    .right-frame {
+      flex: 1;
+      background: #0d1b3e;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 64px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo {
+      font-family: 'Unica One', sans-serif;
+      font-size: 5vh;
+      color: #f5ba5a;
+      letter-spacing: 0.2vh;
+      line-height: 1;
+      margin-bottom: 64px;
+      position: relative;
+    }
+
+    .brand-name span {
+      color: #e0e0e0;
+    }
+
+    /* Tópicos que falam da plataforma */
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      position: relative;
+    }
+
+    .topic {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .check-icon {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 1.5px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .topic-text {
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.55;
+    }
+
+    .topic-text strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* Responsividade */
+    @media (max-width: 860px) {
+      body {
+        flex-direction: column;
+      }
+
+      .left-frame {
+        flex: none;
+        padding: 48px 32px;
+      }
+
+      .right-frame {
+        flex: none;
+        padding: 48px 32px 56px;
+      }
+
+      .brand-name {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .two-fields {
+        grid-template-columns: 50%;
+      }
+
+      .left-frame {
+        padding: 36px 24px;
+      }
+
+      .right-frame {
+        padding: 36px 24px 48px;
+      }
+    }
